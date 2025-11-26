@@ -51,7 +51,7 @@
   --background: #2C2C2C;
   --foreground: #F5F3F0;
   --card: #2C2C2C;
-  haltungtracker: jpg;
+  --card-background: url('haltungtracker.jpg');
   --card-foreground: #F5F3F0;
   --popover: #2C2C2C;
   --popover-foreground: #F5F3F0;
