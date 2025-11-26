@@ -10,10 +10,10 @@ import {
 import { Button } from "./ui/button";
 import { motion, AnimatePresence } from "motion/react";
 import { useEffect } from "react";
-// Cloudinary-hosted image
-const HaltungsTracker = "https://res.cloudinary.com/dytgvfkgo/image/upload/v1764180207/HaltungundApp_tav1ql.png";
 import { useLanguage } from "../contexts/LanguageContext";
 import { Project } from "../data/projectsData";
+
+const HaltungsTracker = "https://res.cloudinary.com/dytgvfkgo/image/upload/v1764180207/HaltungundApp_tav1ql.png";
 
 
 interface ProjectDetailProps {
