@@ -32,7 +32,6 @@ export default defineConfig({
       'figma:asset/a9a26305a58e7cb060fdfc6bc301a01de59c1789.png': path.resolve(__dirname, './src/assets/a9a26305a58e7cb060fdfc6bc301a01de59c1789.png'),
       'figma:asset/9eca7a8ce4c28a7bf251eb2ecbbd92d0ca71a60d.png': path.resolve(__dirname, './src/assets/9eca7a8ce4c28a7bf251eb2ecbbd92d0ca71a60d.png'),
       'figma:asset/9e50184f102b53e1554ed91ccab2c7b70d8816f2.png': path.resolve(__dirname, './src/assets/9e50184f102b53e1554ed91ccab2c7b70d8816f2.png'),
-      'figma:asset/96aa6c30ebb2497b94a3563b590265f53abe3796.png': path.resolve(__dirname, './src/assets/BildFreigestellt.png'),
       'figma:asset/8f89b2326b9d544219af3cc93658320554fd85d6.png': path.resolve(__dirname, './src/assets/8f89b2326b9d544219af3cc93658320554fd85d6.png'),
       'figma:asset/72be67470e1a8eac68b6661850a9ceb8c7280edc.png': path.resolve(__dirname, './src/assets/72be67470e1a8eac68b6661850a9ceb8c7280edc.png'),
       'figma:asset/4bb8bd3b027e7fbad05a2e9f2009790b08fcc7f9.png': path.resolve(__dirname, './src/assets/4bb8bd3b027e7fbad05a2e9f2009790b08fcc7f9.png'),

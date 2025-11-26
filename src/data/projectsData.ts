@@ -1,19 +1,19 @@
-import picture1 from "figma:asset/c6e99aaab6f6105f5aa9901304d2fd4d1043cc47.png";
-import posturaImage1 from "figma:asset/abe9ae3fcee5e0b08a30710196dbb4ecb179f552.png";
-import postureImage4 from "../assets/haltungstracker.jpg";
-import posturaImage2 from "figma:asset/72be67470e1a8eac68b6661850a9ceb8c7280edc.png";
-import posturaImage3 from "figma:asset/ea84a693123bb8fc0e64459acbcd2a3f819c7712.png";
-import myDealzImage1 from "figma:asset/9e50184f102b53e1554ed91ccab2c7b70d8816f2.png";
-import myDealzImage2 from "figma:asset/de7e3e203184103d91157f726e7b13dbb6607185.png";
-import myDealzMockup1 from "figma:asset/b87b59dd244ea3898bba74d34c5a164da9b994a3.png";
-import myDealzMockup2 from "figma:asset/b9c1314be429aa41d3c8efa8704155ae49c7c6f3.png";
-import myDealzMockup3 from "figma:asset/fde9244a45fa5c7e4adf3378ac336bf33595c59a.png";
-import planMeImage1 from "figma:asset/a9a26305a58e7cb060fdfc6bc301a01de59c1789.png";
-import planMeImage2 from "figma:asset/08848c22c4a7a702c03d3c9a343c7ac575ab1a6e.png";
-import planMeImage3 from "figma:asset/debae69e28cbae30af7478ae0fc1f4eeec156214.png";
-import planMeImage4 from "figma:asset/2b83326c902393b8c6753055b060998786b8f2b2.png";
-import fossilBoxImage from "figma:asset/4bb8bd3b027e7fbad05a2e9f2009790b08fcc7f9.png";
-import photographyImage from "figma:asset/c48296c049e6c8c9a707c287335f463af377a82a.png";
+// Cloudinary hosted images
+const picture1 = "https://res.cloudinary.com/dytgvfkgo/image/upload/v1764183242/IMG_6355_qvtr1a.jpg";
+const postureImage4 = "https://res.cloudinary.com/dytgvfkgo/image/upload/v1764180207/HaltungundApp_tav1ql.png";
+const haltungstracker = "https://res.cloudinary.com/dytgvfkgo/image/upload/v1764182965/haltungstracker_cndrrx.png";
+const posturaAusstellung = "https://res.cloudinary.com/dytgvfkgo/image/upload/v1764182691/AusstellungPostura_yqhltw.jpg";
+const posturaFrontal3 = "https://res.cloudinary.com/dytgvfkgo/image/upload/v1764186705/phone_mockup_2_svfbr7.jpg";
+const posturaAllScreens = "https://res.cloudinary.com/dytgvfkgo/image/upload/v1764180514/phone_mockup_5_gsrlmr.jpg";
+const posturaMehransicht = "https://res.cloudinary.com/dytgvfkgo/image/upload/v1764187553/Mehransicht_cpxmwf.png";
+const myDealzImage1 = "https://res.cloudinary.com/dytgvfkgo/image/upload/v1764183661/MockUpFinal_tgs18b.png";
+const myDealzImage2 = "https://res.cloudinary.com/dytgvfkgo/image/upload/v1764183886/MockUp-Onboarding_rw4vhm.jpg";
+const myDealzMockup1 = "https://res.cloudinary.com/dytgvfkgo/image/upload/v1764184147/LandigpageVorherNacher_nogjzn.jpg";
+const myDealzMockup2 = "https://res.cloudinary.com/dytgvfkgo/image/upload/v1764184367/Free_Download_New_Minimalistic_Phone_PSD_Mockup_02_rku5mb.jpg";
+const planMeImage1 = "https://res.cloudinary.com/dytgvfkgo/image/upload/v1764184695/2.PlanMe_liz60l.jpg";
+const planMeImage2 = "https://res.cloudinary.com/dytgvfkgo/image/upload/v1764184835/1PlanMe_iqlfpg.jpg";
+const planMeImage3 = "https://res.cloudinary.com/dytgvfkgo/image/upload/v1764185059/3.PlanMe_kvlfen.png";
+const fossilBoxImage = "https://res.cloudinary.com/dytgvfkgo/image/upload/v1764185325/2425_documentation_Fossil_ceren_henriette_ann_vtnjrp.jpg";
 
 export interface MultilingualText {
   en: string;
@@ -113,8 +113,8 @@ export const projectsData: Project[] = [
         de: "Sauberes, zugängliches UI-Design mit interaktiven Elementen wie Live-Tracking, Feedback-Screens, personalisiertem Dashboard, Übungserinnerungen und Fortschrittsvisualisierungen."
       }
     },
-    image: picture1,
-    images: [picture1, posturaImage2, posturaImage3],
+    images: [postureImage4, haltungstracker, posturaAusstellung, posturaAllScreens],
+    mockups: [posturaFrontal3, posturaMehransicht],
     tags: [
       { en: "Physical Prototype", de: "Physischer Prototyp" },
       { en: "UI/UX-Design", de: "UI/UX-Design" },
@@ -193,9 +193,8 @@ export const projectsData: Project[] = [
         de: "Design und Evaluierung eines neuen benutzerfreundlichen und zugänglichen App-Interfaces."
       }
     ],
-    mockups: [myDealzMockup1, myDealzMockup2, myDealzMockup3],
-    image: myDealzImage1,
-    images: [myDealzImage1, myDealzImage2, myDealzMockup1, myDealzMockup2, myDealzMockup3],
+    mockups: [myDealzMockup1, myDealzMockup2],
+    images: [myDealzImage1, myDealzImage2, myDealzMockup1, myDealzMockup2],
     tags: [
       { en: "UI/UX Design", de: "UI/UX-Design" },
       { en: "UI/UX Research", de: "UI/UX-Forschung" },
@@ -278,8 +277,7 @@ export const projectsData: Project[] = [
         de: "Erfolgreiche Validierung des Konzepts – ähnliche Funktionalität wurde später zu WhatsApp hinzugefügt"
       }
     ],
-    image: planMeImage2,
-    images: [planMeImage2, planMeImage1, planMeImage3, planMeImage4],
+    images: [planMeImage2, planMeImage1, planMeImage3],
     tags: [
       { en: "UI/UX Design", de: "UI/UX-Design" },
       { en: "UI/UX Research", de: "UI/UX-Forschung" },
@@ -366,7 +364,6 @@ export const projectsData: Project[] = [
         de: "Demonstration effektiver Nutzung von Physical Computing in Bildungsausstellungen"
       }
     ],
-    image: fossilBoxImage,
     images: [fossilBoxImage],
     tags: [
       { en: "Physical Prototype", de: "Physischer Prototyp" },
