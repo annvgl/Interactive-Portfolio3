@@ -6,7 +6,8 @@ import { Container } from "./Container";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { useLanguage } from "../contexts/LanguageContext";
 import { Link, useNavigate, useLocation } from "react-router-dom";
-import profileImage from "figma:asset/213634a97c9481f6d87867ed74493a4389e7f1a9.png";
+
+const profileImage = "https://res.cloudinary.com/dytgvfkgo/image/upload/v1764187428/251119_melli-1592_tqoibv.jpg";
 
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);

@@ -1,7 +1,3 @@
-import image_9eca7a8ce4c28a7bf251eb2ecbbd92d0ca71a60d from 'figma:asset/9eca7a8ce4c28a7bf251eb2ecbbd92d0ca71a60d.png';
-import image_f44853e85f8d15d87fbdabb06050fc58db398ad5 from 'figma:asset/f44853e85f8d15d87fbdabb06050fc58db398ad5.png';
-import image_b8e00dc13a231597640725300211cfd5acdd0701 from 'figma:asset/b8e00dc13a231597640725300211cfd5acdd0701.png';
-import image_306b97199ba1ad04257e9d5d5f1c572544fe7577 from 'figma:asset/306b97199ba1ad04257e9d5d5f1c572544fe7577.png';
 import { motion } from "motion/react";
 import { Heart, Lightbulb, Users, Target } from "lucide-react";
 import { TypingAnimation } from "./TypingAnimation";
@@ -9,8 +5,9 @@ import { Container, Section, Grid } from "./Container";
 import { CurriculumVitae } from "./CurriculumVitae";
 import { useLanguage } from "../contexts/LanguageContext";
 import { useState } from 'react';
-import AboutMe from '../assets/AboutMe.png';
 import { FloatingWords } from "./FloatingWords";
+
+const AboutMe = "https://res.cloudinary.com/dytgvfkgo/image/upload/v1764187428/251119_melli-1592_tqoibv.jpg";
 
 export function About() {
   const { language, t } = useLanguage();

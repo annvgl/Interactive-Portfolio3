@@ -3,7 +3,8 @@ import { Linkedin, Mail } from "lucide-react";
 import { TypingAnimation } from "./TypingAnimation";
 import { Container } from "./Container";
 import { useLanguage } from "../contexts/LanguageContext";
-import profileImage from "../assets/HomePic.png";
+
+const profileImage = "https://res.cloudinary.com/dytgvfkgo/image/upload/v1764183242/IMG_6355_qvtr1a.jpg";
 
 export function Hero() {
   const { t } = useLanguage();
