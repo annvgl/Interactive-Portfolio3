@@ -1,0 +1,159 @@
+:root {
+  --font-size: 16px;
+  --background: #ffffff;
+  --foreground: #2C2C2C;
+  --card: #ffffff;
+  --card-foreground: #2C2C2C;
+  --popover: #ffffff;
+  --popover-foreground: #2C2C2C;
+  --primary: #7A6F5D;
+  --primary-foreground: #ffffff;
+  --secondary: #E8E4DF;
+  --secondary-foreground: #2C2C2C;
+  --muted: #ACA399;
+  --muted-foreground: #6B6B6B;
+  --accent: #7A6F5D;
+  --accent-foreground: #ffffff;
+  --destructive: #d4183d;
+  --destructive-foreground: #ffffff;
+  --border: rgba(122, 111, 93, 0.2);
+  --input: transparent;
+  --input-background: #F5F3F0;
+  --switch-background: #D4CFC7;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: #ACA399;
+  --chart-1: #7A6F5D;
+  --chart-2: #ACA399;
+  --chart-3: #E8E4DF;
+  --chart-4: #2C2C2C;
+  --chart-5: #FFFFFF;
+  --radius: 0.625rem;
+  --sidebar: #ffffff;
+  --sidebar-foreground: #2C2C2C;
+  --sidebar-primary: #7A6F5D;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #E8E4DF;
+  --sidebar-accent-foreground: #2C2C2C;
+  --sidebar-border: rgba(122, 111, 93, 0.2);
+  --sidebar-ring: #ACA399;
+
+  /* Neutral Portfolio Custom Colors */
+  --deep-charcoal: #2C2C2C;
+  --warm-taupe: #7A6F5D;
+  --soft-beige: #E8E4DF;
+  --medium-taupe: #ACA399;
+  --light-cream: #F5F3F0;
+  --navy-accent: #1E2842;
+}
+
+.dark {
+  --background: #2C2C2C;
+  --foreground: #F5F3F0;
+  --card: #2C2C2C;
+  haltungtracker.jpg;
+  --card-foreground: #F5F3F0;
+  --popover: #2C2C2C;
+  --popover-foreground: #F5F3F0;
+  --primary: #7A6F5D;
+  --primary-foreground: #ffffff;
+  --secondary: #ACA399;
+  --secondary-foreground: #2C2C2C;
+  --muted: #E8E4DF;
+  --muted-foreground: #6B6B6B;
+  --accent: #7A6F5D;
+  --accent-foreground: #ffffff;
+  --destructive: #d4183d;
+  --destructive-foreground: #ffffff;
+  --border: rgba(122, 111, 93, 0.3);
+  --input: transparent;
+  --input-background: #1E2842;
+  --switch-background: #ACA399;
+  --ring: #ACA399;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --chart-1: #7A6F5D;
+  --chart-2: #ACA399;
+  --chart-3: #E8E4DF;
+  --chart-4: #F5F3F0;
+  --chart-5: #2C2C2C;
+  --sidebar: #2C2C2C;
+  --sidebar-foreground: #F5F3F0;
+  --sidebar-primary: #7A6F5D;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #ACA399;
+  --sidebar-accent-foreground: #2C2C2C;
+  --sidebar-border: rgba(122, 111, 93, 0.3);
+  --sidebar-ring: #ACA399;
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+    outline-color: color-mix(in srgb, var(--ring) 50%, transparent);
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+  }
+}
+
+/**
+ * Base typography. This is not applied to elements which have an ancestor with a Tailwind text class.
+ */
+@layer base {
+  :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {
+    h1 {
+      font-size: var(--text-2xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h2 {
+      font-size: var(--text-xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h3 {
+      font-size: var(--text-lg);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h4 {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    p {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+
+    label {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    button {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    input {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+  }
+}
+
+html {
+  font-size: var(--font-size);
+}

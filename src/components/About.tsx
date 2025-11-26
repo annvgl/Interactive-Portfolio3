@@ -1,0 +1,141 @@
+import image_9eca7a8ce4c28a7bf251eb2ecbbd92d0ca71a60d from 'figma:asset/9eca7a8ce4c28a7bf251eb2ecbbd92d0ca71a60d.png';
+import image_f44853e85f8d15d87fbdabb06050fc58db398ad5 from 'figma:asset/f44853e85f8d15d87fbdabb06050fc58db398ad5.png';
+import image_b8e00dc13a231597640725300211cfd5acdd0701 from 'figma:asset/b8e00dc13a231597640725300211cfd5acdd0701.png';
+import image_306b97199ba1ad04257e9d5d5f1c572544fe7577 from 'figma:asset/306b97199ba1ad04257e9d5d5f1c572544fe7577.png';
+import { motion } from "motion/react";
+import { Heart, Lightbulb, Users, Target } from "lucide-react";
+import { TypingAnimation } from "./TypingAnimation";
+import { Container, Section, Grid } from "./Container";
+import { CurriculumVitae } from "./CurriculumVitae";
+import { useLanguage } from "../contexts/LanguageContext";
+import { useState } from 'react';
+import AboutMe from '../assets/AboutMe.png';
+import { FloatingWords } from "./FloatingWords";
+
+export function About() {
+  const { language, t } = useLanguage();
+
+  const values = [
+    {
+      icon: Users,
+      title: t("about_value1_title"),
+      description: t("about_value1_desc")
+    },
+    {
+      icon: Lightbulb,
+      title: t("about_value2_title"),
+      description: t("about_value2_desc")
+    },
+    {
+      icon: Target,
+      title: t("about_value3_title"),
+      description: t("about_value3_desc")
+    },
+    {
+      icon: Heart,
+      title: t("about_value4_title"),
+      description: t("about_value4_desc")
+    }
+  ];
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  return (
+    <Section id="about" className="bg-gradient-to-b from-white via-[#F5F3F0] to-white">
+      <Container>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-5xl md:text-6xl mb-6 text-[#2C2C2C]">
+            <TypingAnimation text={t("about_title")} speed={70} showCursor={false} />
+          </h2>
+        </motion.div>
+
+        {/* Image and Content - Perfect Alignment */}
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 items-end mb-20">
+          {/* Text Content */}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="space-y-6 lg:col-span-1"
+          >
+            <div className="space-y-4 text-[#6B6B6B] text-lg leading-relaxed">
+              <p>
+                {t("about_text1")}
+              </p>
+              <p>
+                {t("about_text2")}
+              </p>
+              <p>
+                {t("about_text3")}
+              </p>
+            </div>
+            <div className="flex items-center gap-6 pt-4">
+              <button
+                onClick={() => document.getElementById("cv")?.scrollIntoView({ behavior: "smooth" })}
+                className="group relative px-8 py-4 bg-[#7A6F5D] text-white overflow-hidden transition-all hover:px-10 rounded-2xl shadow-lg hover:shadow-xl hover:shadow-[#7A6F5D]/30"
+              >
+                <span className="relative z-10 text-sm uppercase tracking-wider">
+                  {t("hero_cta")}
+                </span>
+                <div className="absolute inset-0 bg-[#ACA399] transform translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-300" />
+              </button>
+            </div>
+          </motion.div>
+
+          {/* Image */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.9 }}
+            className="relative lg:col-span-3 lg:-mr-8 h-[800px] lg:h-screen overflow-hidden"
+          >
+            <img
+              src={AboutMe}
+              alt="Ann Vogel"
+              className="w-full h-full object-cover object-bottom"
+
+            />
+            <FloatingWords />
+          </motion.div>
+        </div>
+
+        {/* Values Grid - Perfect Alignment */}
+        <Grid columns={4} gap={6}>
+          {values.map((value, index) => {
+            const Icon = value.icon;
+            return (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                whileHover={{
+                  y: -5,
+                  scale: 1.5,
+                  transition: { duration: 0.3 }
+                }}
+                className="text-center group bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl hover:shadow-[#7A6F5D]/10 transition-all duration-300 border-2 border-[#E8E4DF]/50 hover:border-[#7A6F5D]/50"
+              >
+                <div className="inline-flex p-4 rounded-2xl bg-gradient-to-br from-[#7A6F5D] to-[#ACA399] mb-4 shadow-md group-hover:shadow-xl group-hover:shadow-[#7A6F5D]/30 transition-all duration-300">
+                  <Icon className="w-8 h-8 text-white" />
+                </div>
+                <h4 className="text-[#2C2C2C] mb-2 group-hover:text-[#7A6F5D] transition-colors duration-300">{value.title}</h4>
+                <p className="text-[#6B6B6B]">{value.description}</p>
+              </motion.div>
+            );
+          })}
+        </Grid>
+
+        {/* Curriculum Vitae - Expandable */}
+        <CurriculumVitae language={language} />
+      </Container>
+    </Section>
+  );
+}
