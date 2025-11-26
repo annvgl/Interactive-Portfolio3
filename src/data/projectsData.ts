@@ -13,7 +13,7 @@ const planMeImage2 = "https://res.cloudinary.com/dytgvfkgo/image/upload/v1764180
 const planMeImage3 = "https://res.cloudinary.com/dytgvfkgo/image/upload/v1764180207/PlanMe3_nz7qzx.png";
 const planMeImage4 = "https://res.cloudinary.com/dytgvfkgo/image/upload/v1764180207/PlanMe4_hgwuwz.png";
 const fossilBoxImage = "https://res.cloudinary.com/dytgvfkgo/image/upload/v1764180207/FossilBox_llqq8e.png";
-const photographyImage = "https://res.cloudinary.com/dytgvfkgo/image/upload/v1764180207/Photography_f8ozb3.png";
+
 
 export interface MultilingualText {
   en: string;
