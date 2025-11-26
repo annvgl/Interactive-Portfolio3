@@ -10,6 +10,8 @@ import {
 import { Button } from "./ui/button";
 import { motion, AnimatePresence } from "motion/react";
 import { useEffect } from "react";
+// Cloudinary-hosted image
+const HaltungsTracker = "https://res.cloudinary.com/dytgvfkgo/image/upload/v1764180207/HaltungundApp_tav1ql.png";
 import { useLanguage } from "../contexts/LanguageContext";
 import { Project } from "../data/projectsData";
 
@@ -282,7 +284,7 @@ export function ProjectDetail({
                     {project.images.length > 1 && (
                       <div className="lg:col-span-2 p-4 flex items-center justify-center">
                         <ImageWithFallback
-                          src={project.images[1]}
+                          src={project.title.en === "Postura – Your Posture, Your Strength" ? HaltungsTracker : project.images[1]}
                           alt="Challenge visualization"
                           className="w-[400px] h-auto object-contain rounded-xl"
                         />
@@ -394,8 +396,8 @@ export function ProjectDetail({
                         </div>
                         <div className="lg:col-span-2 p-4 flex items-center justify-center">
                           <ImageWithFallback
-                            src={project.images[3]}
-                            alt="Postura All Screens"
+                            src={project.images[1]}
+                            alt="HaltungsTracker visualization"
                             className="w-full h-auto object-contain rounded-xl"
                           />
                         </div>
@@ -421,8 +423,8 @@ export function ProjectDetail({
                 )}
               </div>
 
-              {/* Design Mockups - Horizontal Flow (Not for Postura) */}
-              {project.mockups && project.mockups.length > 0 && project.title.en !== "Postura – Your Posture, Your Strength" && (
+              {/* Design Mockups - Horizontal Flow */}
+              {project.mockups && project.mockups.length > 0 && (
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -465,24 +467,9 @@ export function ProjectDetail({
                   <h2 className="text-[24px] text-[#232323] mb-4">
                     {t("project_uiux")}
                   </h2>
-                  <p className="text-[17px] text-[#727272] leading-relaxed mb-6">
+                  <p className="text-[17px] text-[#727272] leading-relaxed">
                     {getText(project.uiUxAspects.description)}
                   </p>
-
-                  {/* Mockups under UI/UX for Postura only */}
-                  {project.title.en === "Postura – Your Posture, Your Strength" && project.mockups && project.mockups.length > 0 && (
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
-                      {project.mockups.map((mockup, index) => (
-                        <div key={index} className="rounded-lg overflow-hidden">
-                          <ImageWithFallback
-                            src={mockup}
-                            alt={`${getText(project.title)} mockup ${index + 1}`}
-                            className="w-full h-auto object-cover"
-                          />
-                        </div>
-                      ))}
-                    </div>
-                  )}
                 </motion.div>
               )}
 

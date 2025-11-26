@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import svgPaths from "../imports/svg-dgcyx194wb";
-
-const imgImageAnnVogel = "https://res.cloudinary.com/dytgvfkgo/image/upload/v1764187428/251119_melli-1592_tqoibv.jpg";
+import imgImageAnnVogel from "figma:asset/f44853e85f8d15d87fbdabb06050fc58db398ad5.png";
 
 interface CVProps {
   language: 'de' | 'en';
