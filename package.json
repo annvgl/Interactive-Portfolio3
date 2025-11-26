@@ -57,8 +57,7 @@
             "autoprefixer": "^10.4.16",
             "postcss": "^8.4.32"
       },
-      "devDependencies": {
-      },
+      "devDependencies": {},
       "scripts": {
             "dev": "vite",
             "build": "tsc && vite build",
