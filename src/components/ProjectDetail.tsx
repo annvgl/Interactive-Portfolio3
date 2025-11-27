@@ -126,33 +126,33 @@ export function ProjectDetail({
             className="relative min-h-screen bg-[#F5F3F0]"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Close Button - Minimal */}
+            {/* Close Button - Round with Better Contrast */}
             <button
               onClick={onClose}
-              className="fixed top-6 left-6 z-50 w-10 h- rounded-full bg-white shadow-sm flex items-center justify-center text-[#ACA399] hover:bg-[#7A6F5D] hover:text-white transition-all duration-300"
+              className="fixed top-6 left-6 z-50 w-12 h-12 rounded-full bg-[#2C2C2C] shadow-lg flex items-center justify-center text-white hover:bg-[#7A6F5D] hover:scale-110 transition-all duration-300"
               aria-label={t("close")}
             >
-              <X className="w-5 h-5" />
+              <X className="w-6 h-6" />
             </button>
 
-            {/* Navigation Arrows - Subtle */}
+            {/* Navigation Arrows - Subtle with Better Hover */}
             {hasPrevious && onPrevious && (
               <button
                 onClick={onPrevious}
-                className="fixed left-6 top-1/2 -translate-y-1/2 z-50 w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center text-[#ACA399] hover:bg-[#7A6F5D] hover:text-white transition-all duration-300"
+                className="fixed left-6 top-1/2 -translate-y-1/2 z-50 w-12 h-12 rounded-full bg-white/90 shadow-lg flex items-center justify-center text-[#2C2C2C] hover:bg-[#7A6F5D] hover:text-white hover:scale-110 transition-all duration-300"
                 aria-label={t("project_prev")}
               >
-                <ChevronLeft className="w-5 h-5" />
+                <ChevronLeft className="w-6 h-6" />
               </button>
             )}
 
             {hasNext && onNext && (
               <button
                 onClick={onNext}
-                className="fixed right-6 top-1/2 -translate-y-1/2 z-50 w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center text-[#ACA399] hover:bg-[#7A6F5D] hover:text-white transition-all duration-300"
+                className="fixed right-6 top-1/2 -translate-y-1/2 z-50 w-12 h-12 rounded-full bg-white/90 shadow-lg flex items-center justify-center text-[#2C2C2C] hover:bg-[#7A6F5D] hover:text-white hover:scale-110 transition-all duration-300"
                 aria-label={t("project_next")}
               >
-                <ChevronRight className="w-5 h-5" />
+                <ChevronRight className="w-6 h-6" />
               </button>
             )}
 
@@ -255,15 +255,15 @@ export function ProjectDetail({
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.2 }}
-                  className="mb-8"
+                  className="mb-16"
                 >
-                  <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 items-start">
-                    <div className="lg:col-span-3 p-8 md:p-8">
-                      <h2 className="text-[24px] text-[#2C2C2C] mb-4">
+                  <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 items-start">
+                    <div className="lg:col-span-3 p-8 md:p-10">
+                      <h2 className="text-[26px] text-[#2C2C2C] mb-6 font-medium">
                         {t("project_challenge")}
                       </h2>
                       {Array.isArray(project.problem) ? (
-                        <ul className="space-y-3">
+                        <ul className="space-y-4">
                           {getArrayText(project.problem).map((item, index) => (
                             <li key={index} className="flex items-start">
                               <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-[#7A6F5D] mr-3 mt-2"></span>
@@ -282,9 +282,9 @@ export function ProjectDetail({
 
                     {/* Supporting Image - Harmonious */}
                     {project.images.length > 1 && (
-                      <div className="lg:col-span-2 p-4 flex items-center justify-center">
+                      <div className="lg:col-span-2 p-6 flex items-center justify-center">
                         <ImageWithFallback
-                          src={project.title.en === "Postura – Your Posture, Your Strength" 
+                          src={project.title.en === "Postura – Your Posture, Your Strength"
                             ? "https://res.cloudinary.com/dytgvfkgo/image/upload/v1764250743/Bildschirmfoto_2025-11-27_um_14.38.51_hveovq.png"
                             : project.images[1]}
                           alt="Challenge visualization"
@@ -302,9 +302,9 @@ export function ProjectDetail({
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.3 }}
-                  className="p-6 md:p-8 mb-8"
+                  className="p-8 md:p-10 mb-16"
                 >
-                  <h2 className="text-[24px] text-[#232323] mb-4">
+                  <h2 className="text-[26px] text-[#232323] mb-6 font-medium">
                     {t("project_role")}
                   </h2>
                   <p className="text-[17px] text-[#727272] leading-relaxed">
@@ -319,15 +319,15 @@ export function ProjectDetail({
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.4 }}
-                  className="p-6 md:p-8 mb-8"
+                  className="p-8 md:p-10 mb-16"
                 >
-                  <h2 className="text-[24px] text-[#232323] mb-4">
+                  <h2 className="text-[26px] text-[#232323] mb-6 font-medium">
                     {t("project_research")}
                   </h2>
                   {project.researchInsights.methods && project.researchInsights.methods.length > 0 && (
-                    <div className="mb-4">
-                      <h3 className="text-[20px] text-[#2C2C2C] mb-3 font-medium">Methods</h3>
-                      <ul className="space-y-2">
+                    <div className="mb-6">
+                      <h3 className="text-[20px] text-[#2C2C2C] mb-4 font-medium">Methods</h3>
+                      <ul className="space-y-3">
                         {getArrayText(project.researchInsights.methods).map((item, index) => (
                           <li key={index} className="flex items-start">
                             <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-[#2084C4] mr-3 mt-2"></span>
@@ -339,8 +339,8 @@ export function ProjectDetail({
                   )}
                   {project.researchInsights.findings && project.researchInsights.findings.length > 0 && (
                     <div className="mb-4">
-                      <h3 className="text-[20px] text-[#2C2C2C] mb-3 font-medium">Key Findings</h3>
-                      <ul className="space-y-2">
+                      <h3 className="text-[20px] text-[#2C2C2C] mb-4 font-medium">Key Findings</h3>
+                      <ul className="space-y-3">
                         {getArrayText(project.researchInsights.findings).map((item, index) => (
                           <li key={index} className="flex items-start">
                             <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-[#2084C4] mr-3 mt-2"></span>
@@ -359,9 +359,9 @@ export function ProjectDetail({
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.5 }}
-                  className="mb-8"
+                  className="mb-16"
                 >
-                  <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 items-start">
+                  <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 items-start">
                     {/* Supporting Image - postureImage4 for Postura */}
                     {project.images.length > 2 && (
                       <div className="lg:col-span-2 p-6 flex items-center justify-center order-2 lg:order-1">
@@ -375,8 +375,8 @@ export function ProjectDetail({
                       </div>
                     )}
 
-                    <div className="lg:col-span-3 p-6 md:p-8 order-1 lg:order-2">
-                      <h2 className="text-[24px] text-[#232323] mb-4">
+                    <div className="lg:col-span-3 p-8 md:p-10 order-1 lg:order-2">
+                      <h2 className="text-[26px] text-[#232323] mb-6 font-medium">
                         {t("project_solution")}
                       </h2>
                       <p className="text-[17px] text-[#727272] leading-relaxed">
@@ -393,10 +393,10 @@ export function ProjectDetail({
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.6 }}
-                  className="mb-8"
+                  className="mb-16"
                 >
-                  <div className="p-6 md:p-8 mb-6">
-                    <h2 className="text-[24px] text-[#232323] mb-4">
+                  <div className="p-8 md:p-10 mb-8">
+                    <h2 className="text-[26px] text-[#232323] mb-6 font-medium">
                       {t("project_design_process")}
                     </h2>
                     <p className="text-[17px] text-[#727272] leading-relaxed">
@@ -406,7 +406,7 @@ export function ProjectDetail({
 
                   {/* Design Process Images for Postura Project */}
                   {project.title.en === "Postura – Your Posture, Your Strength" && (
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-6 md:px-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-8 md:px-10">
                       <div className="p-4 flex items-center justify-center">
                         <ImageWithFallback
                           src="https://res.cloudinary.com/dytgvfkgo/image/upload/v1764186705/phone_mockup_2_svfbr7.jpg"
@@ -432,57 +432,47 @@ export function ProjectDetail({
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.7 }}
-                  className="mb-8"
+                  className="mb-16"
                 >
                   {project.title.en === "Postura – Your Posture, Your Strength" ? (
-                    <>
-                      <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 items-start">
-                        <div className="lg:col-span-3 p-6 md:p-8">
-                          <h2 className="text-[24px] text-[#232323] mb-4">
-                            {t("project_physical_prototype")}
-                          </h2>
-                          <p className="text-[17px] text-[#727272] leading-relaxed mb-4">
-                            {getText(project.physicalPrototype.description)}
-                          </p>
-                          {project.physicalPrototype.features && project.physicalPrototype.features.length > 0 && (
-                            <ul className="space-y-2 mt-4">
-                              {getArrayText(project.physicalPrototype.features).map((item, index) => (
-                                <li key={index} className="flex items-start">
-                                  <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-[#2084C4] mr-3 mt-2"></span>
-                                  <span className="text-[17px] text-[#727272] leading-relaxed">{item}</span>
-                                </li>
-                              ))}
-                            </ul>
-                          )}
-                        </div>
-                        {/* Image on the right */}
-                        <div className="lg:col-span-2 p-6 flex items-center justify-center">
-                          <ImageWithFallback
-                            src={project.images[1]}
-                            alt="Physical Prototype visualization"
-                            className="w-full h-auto object-contain rounded-xl"
-                          />
-                        </div>
+                    <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 items-start">
+                      <div className="lg:col-span-3 p-8 md:p-10">
+                        <h2 className="text-[26px] text-[#232323] mb-6 font-medium">
+                          {t("project_physical_prototype")}
+                        </h2>
+                        <p className="text-[17px] text-[#727272] leading-relaxed mb-6">
+                          {getText(project.physicalPrototype.description)}
+                        </p>
+                        {project.physicalPrototype.features && project.physicalPrototype.features.length > 0 && (
+                          <ul className="space-y-3 mt-6">
+                            {getArrayText(project.physicalPrototype.features).map((item, index) => (
+                              <li key={index} className="flex items-start">
+                                <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-[#2084C4] mr-3 mt-2"></span>
+                                <span className="text-[17px] text-[#727272] leading-relaxed">{item}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        )}
                       </div>
-                      {/* posturaMehransicht below */}
-                      <div className="px-6 md:px-8 mt-6">
+                      {/* posturaAusstellung on the right */}
+                      <div className="lg:col-span-2 p-6 flex items-center justify-center">
                         <ImageWithFallback
-                          src="https://res.cloudinary.com/dytgvfkgo/image/upload/v1764187553/Mehransicht_cpxmwf.png"
-                          alt="Postura Mehransicht"
+                          src={project.images[1]}
+                          alt="Postura Ausstellung"
                           className="w-full h-auto object-contain rounded-xl"
                         />
                       </div>
-                    </>
+                    </div>
                   ) : (
-                    <div className="p-6 md:p-8">
-                      <h2 className="text-[24px] text-[#232323] mb-4">
+                    <div className="p-8 md:p-10">
+                      <h2 className="text-[26px] text-[#232323] mb-6 font-medium">
                         {t("project_physical_prototype")}
                       </h2>
-                      <p className="text-[17px] text-[#727272] leading-relaxed mb-4">
+                      <p className="text-[17px] text-[#727272] leading-relaxed mb-6">
                         {getText(project.physicalPrototype.description)}
                       </p>
                       {project.physicalPrototype.features && project.physicalPrototype.features.length > 0 && (
-                        <ul className="space-y-2 mt-4">
+                        <ul className="space-y-3 mt-6">
                           {getArrayText(project.physicalPrototype.features).map((item, index) => (
                             <li key={index} className="flex items-start">
                               <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-[#2084C4] mr-3 mt-2"></span>
@@ -497,19 +487,19 @@ export function ProjectDetail({
               )}
 
               {/* Approach & Outcomes - Side by Side */}
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
                 {/* Approach */}
                 {project.approach && project.approach.length > 0 && (
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.8 }}
-                    className="p-6 md:p-8"
+                    className="p-8 md:p-10"
                   >
-                    <h2 className="text-[24px] text-[#232323] mb-4">
+                    <h2 className="text-[26px] text-[#232323] mb-6 font-medium">
                       {t("project_approach")}
                     </h2>
-                    <ul className="space-y-3">
+                    <ul className="space-y-4">
                       {getArrayText(project.approach).map((item, index) => (
                         <li key={index} className="flex items-start">
                           <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-[#2084C4] mr-3 mt-2"></span>
@@ -528,12 +518,12 @@ export function ProjectDetail({
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.9 }}
-                    className="p-6 md:p-8"
+                    className="p-8 md:p-10"
                   >
-                    <h2 className="text-[24px] text-[#232323] mb-4">
+                    <h2 className="text-[26px] text-[#232323] mb-6 font-medium">
                       {t("project_outcomes")}
                     </h2>
-                    <ul className="space-y-3">
+                    <ul className="space-y-4">
                       {getArrayText(project.outcomes).map((outcome, index) => (
                         <li key={index} className="flex items-start">
                           <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-[#2084C4] mr-3 mt-2"></span>
@@ -553,13 +543,13 @@ export function ProjectDetail({
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 1.0 }}
-                  className="mb-8"
+                  className="mb-16"
                 >
-                  <h2 className="text-[24px] text-[#232323] mb-5 px-1">
+                  <h2 className="text-[26px] text-[#232323] mb-6 px-2 font-medium">
                     {t("project_mockups")}
                   </h2>
                   <div className="overflow-x-auto pb-4 -mx-6 px-6">
-                    <div className="flex gap-5 min-w-max">
+                    <div className="flex gap-6 min-w-max">
                       {project.mockups.map((mockup, index) => (
                         <div
                           key={index}
@@ -574,7 +564,7 @@ export function ProjectDetail({
                       ))}
                     </div>
                   </div>
-                  <p className="text-[15px] text-[#727272] text-center mt-3">
+                  <p className="text-[15px] text-[#727272] text-center mt-4">
                     {t("project_scroll_hint")}
                   </p>
                 </motion.div>
@@ -586,14 +576,25 @@ export function ProjectDetail({
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 1.1 }}
-                  className="p-6 md:p-8 border border-[#E1EBF3]/40 mb-12"
+                  className="p-8 md:p-10 border border-[#E1EBF3]/40 mb-20"
                 >
-                  <h2 className="text-[24px] text-[#232323] mb-4">
+                  <h2 className="text-[26px] text-[#232323] mb-6 font-medium">
                     {t("project_results")}
                   </h2>
-                  <p className="text-[17px] text-[#727272] leading-relaxed">
+                  <p className="text-[17px] text-[#727272] leading-relaxed mb-8">
                     {getText(project.finalResults)}
                   </p>
+
+                  {/* posturaMehransicht for Postura project */}
+                  {project.title.en === "Postura – Your Posture, Your Strength" && (
+                    <div className="mt-8">
+                      <ImageWithFallback
+                        src="https://res.cloudinary.com/dytgvfkgo/image/upload/v1764187553/Mehransicht_cpxmwf.png"
+                        alt="Postura Mehransicht"
+                        className="w-full h-auto object-contain rounded-xl"
+                      />
+                    </div>
+                  )}
                 </motion.div>
               )}
 
