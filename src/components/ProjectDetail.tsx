@@ -435,8 +435,8 @@ export function ProjectDetail({
                   className="mb-16"
                 >
                   {project.title.en === "Postura – Your Posture, Your Strength" ? (
-                    <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 items-start">
-                      <div className="lg:col-span-3 p-8 md:p-10">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+                      <div className="p-8 md:p-10">
                         <h2 className="text-[26px] text-[#232323] mb-6 font-medium">
                           {t("project_physical_prototype")}
                         </h2>
@@ -455,7 +455,7 @@ export function ProjectDetail({
                         )}
                       </div>
                       {/* posturaAusstellung on the right */}
-                      <div className="lg:col-span-2 py-6 pl-8 pr-0 flex items-center justify-start">
+                      <div className="py-6 pl-6 pr-0 flex items-center justify-start">
                         <ImageWithFallback
                           src={project.images[1]}
                           alt="Postura Ausstellung"
