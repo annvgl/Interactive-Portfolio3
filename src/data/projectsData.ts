@@ -143,7 +143,7 @@ export const projectsData: Project[] = [
         de: "Dualer Ansatz mit mobiler App und physischem Prototyp. Die App bietet Echtzeit-Haltungsüberwachung, personalisierte Übungsempfehlungen und Fortschrittsverfolgung. Der Prototyp liefert taktiles Feedback und unterstützt korrekte Sitzpositionen."
       }
     },
-    images: [posturaHeroImage, picture1, posturaAusstellung, posturaFrontal3, posturaAllScreens, posturaMehransicht],
+    images: [picture1, posturaHeroImage, posturaAusstellung, posturaFrontal3, posturaAllScreens, posturaMehransicht],
     tags: [
       { en: "Physical Prototype", de: "Physischer Prototyp" },
       { en: "UI/UX-Design", de: "UI/UX-Design" },
