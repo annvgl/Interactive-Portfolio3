@@ -462,14 +462,36 @@ export function ProjectDetail({
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.8 }}
-                  className="p-6 md:p-8 mb-8"
+                  className="mb-8"
                 >
-                  <h2 className="text-[24px] text-[#232323] mb-4">
-                    {t("project_uiux")}
-                  </h2>
-                  <p className="text-[17px] text-[#727272] leading-relaxed">
-                    {getText(project.uiUxAspects.description)}
-                  </p>
+                  <div className="p-6 md:p-8 mb-6">
+                    <h2 className="text-[24px] text-[#232323] mb-4">
+                      {t("project_uiux")}
+                    </h2>
+                    <p className="text-[17px] text-[#727272] leading-relaxed">
+                      {getText(project.uiUxAspects.description)}
+                    </p>
+                  </div>
+
+                  {/* UI/UX Images for Postura Project */}
+                  {project.title.en === "Postura – Your Posture, Your Strength" && (
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-6 md:px-8">
+                      <div className="p-4 flex items-center justify-center">
+                        <ImageWithFallback
+                          src="https://res.cloudinary.com/dytgvfkgo/image/upload/v1764187553/Mehransicht_cpxmwf.png"
+                          alt="Postura Mehransicht"
+                          className="w-full h-auto object-contain rounded-xl"
+                        />
+                      </div>
+                      <div className="p-4 flex items-center justify-center">
+                        <ImageWithFallback
+                          src="https://res.cloudinary.com/dytgvfkgo/image/upload/v1764186705/phone_mockup_2_svfbr7.jpg"
+                          alt="Postura Phone Mockup"
+                          className="w-full h-auto object-contain rounded-xl"
+                        />
+                      </div>
+                    </div>
+                  )}
                 </motion.div>
               )}
 
