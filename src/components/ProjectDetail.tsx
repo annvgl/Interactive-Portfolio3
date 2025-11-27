@@ -13,7 +13,7 @@ import { useEffect } from "react";
 import { useLanguage } from "../contexts/LanguageContext";
 import { Project } from "../data/projectsData";
 
-const HaltungsTracker = "https://res.cloudinary.com/dytgvfkgo/image/upload/v1764180207/HaltungundApp_tav1ql.png";
+const HaltungsTracker = "https://res.cloudinary.com/dytgvfkgo/image/upload/v1764182965/haltungstracker_cndrrx.png";
 
 
 interface ProjectDetailProps {

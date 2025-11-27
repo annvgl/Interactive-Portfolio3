@@ -7,7 +7,7 @@ import { useLanguage } from "../contexts/LanguageContext";
 import { useState } from 'react';
 import { FloatingWords } from "./FloatingWords";
 
-const AboutMe = "https://res.cloudinary.com/dytgvfkgo/image/upload/v1764187428/251119_melli-1592_tqoibv.jpg";
+const AboutMe = "https://res.cloudinary.com/dytgvfkgo/image/upload/v1764186170/AboutMe_uussxj.png";
 
 export function About() {
   const { language, t } = useLanguage();

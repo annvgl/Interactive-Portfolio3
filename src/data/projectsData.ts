@@ -1,19 +1,20 @@
-// Cloudinary-hosted images
+// Cloudinary hosted images - ORIGINAL URLs
 const picture1 = "https://res.cloudinary.com/dytgvfkgo/image/upload/v1764183242/IMG_6355_qvtr1a.jpg";
-const postureImage4 = "https://res.cloudinary.com/dytgvfkgo/image/upload/v1764180207/HaltungundApp_tav1ql.png";
-const posturaImage2 = "https://res.cloudinary.com/dytgvfkgo/image/upload/v1764180208/HaltungApp_frz3mf.png";
-const posturaImage3 = "https://res.cloudinary.com/dytgvfkgo/image/upload/v1764180207/HaltungPrototyp_j1yygw.png";
-const myDealzImage1 = "https://res.cloudinary.com/dytgvfkgo/image/upload/v1764180207/MyDealz_yxfdq5.png";
-const myDealzImage2 = "https://res.cloudinary.com/dytgvfkgo/image/upload/v1764180207/MyDealzNeu_ymgq66.png";
-const myDealzMockup1 = "https://res.cloudinary.com/dytgvfkgo/image/upload/v1764180207/MyDealzMockup1_kquavp.png";
-const myDealzMockup2 = "https://res.cloudinary.com/dytgvfkgo/image/upload/v1764180207/MyDealzMockup2_nozjvb.png";
-const myDealzMockup3 = "https://res.cloudinary.com/dytgvfkgo/image/upload/v1764180207/MyDealzMockup3_swyuvh.png";
-const planMeImage1 = "https://res.cloudinary.com/dytgvfkgo/image/upload/v1764180207/PlanMe2_rgndj7.png";
-const planMeImage2 = "https://res.cloudinary.com/dytgvfkgo/image/upload/v1764180207/PlanMe1_thmxjm.png";
-const planMeImage3 = "https://res.cloudinary.com/dytgvfkgo/image/upload/v1764180207/PlanMe3_nz7qzx.png";
-const planMeImage4 = "https://res.cloudinary.com/dytgvfkgo/image/upload/v1764180207/PlanMe4_hgwuwz.png";
-const fossilBoxImage = "https://res.cloudinary.com/dytgvfkgo/image/upload/v1764180207/FossilBox_llqq8e.png";
-
+const postureImage4 = "https://res.cloudinary.com/dytgvfkgo/image/upload/v1764182965/haltungstracker_cndrrx.png";
+const posturaAusstellung = "https://res.cloudinary.com/dytgvfkgo/image/upload/v1764182691/AusstellungPostura_yqhltw.jpg";
+const posturaFrontal3 = "https://res.cloudinary.com/dytgvfkgo/image/upload/v1764186705/phone_mockup_2_svfbr7.jpg";
+const posturaAllScreens = "https://res.cloudinary.com/dytgvfkgo/image/upload/v1764180514/phone_mockup_5_gsrlmr.jpg";
+const posturaMehransicht = "https://res.cloudinary.com/dytgvfkgo/image/upload/v1764187553/Mehransicht_cpxmwf.png";
+const myDealzImage1 = "https://res.cloudinary.com/dytgvfkgo/image/upload/v1764183661/MockUpFinal_tgs18b.png";
+const myDealzImage2 = "https://res.cloudinary.com/dytgvfkgo/image/upload/v1764183909/MockUp-Onboarding_p9fvkw.jpg";
+const myDealzMockup1 = "https://res.cloudinary.com/dytgvfkgo/image/upload/v1764184147/LandigpageVorherNacher_nogjzn.jpg";
+const myDealzMockup2 = "https://res.cloudinary.com/dytgvfkgo/image/upload/v1764184367/Free_Download_New_Minimalistic_Phone_PSD_Mockup_02_rku5mb.jpg";
+const planMeImage1 = "https://res.cloudinary.com/dytgvfkgo/image/upload/v1764184695/2.PlanMe_liz60l.jpg";
+const planMeImage2 = "https://res.cloudinary.com/dytgvfkgo/image/upload/v1764184835/1PlanMe_iqlfpg.jpg";
+const planMeImage3 = "https://res.cloudinary.com/dytgvfkgo/image/upload/v1764185059/3.PlanMe_kvlfen.png";
+const fossilBoxImage = "https://res.cloudinary.com/dytgvfkgo/image/upload/v1764185325/2425_documentation_Fossil_ceren_henriette_ann_vtnjrp.jpg";
+const profileImageBildFreigestellt = "https://res.cloudinary.com/dytgvfkgo/image/upload/v1764185869/BildFreigestellt_gutrf1.png";
+const aboutMeImage = "https://res.cloudinary.com/dytgvfkgo/image/upload/v1764186170/AboutMe_uussxj.png";
 
 export interface MultilingualText {
   en: string;
@@ -113,8 +114,7 @@ export const projectsData: Project[] = [
         de: "Sauberes, zugängliches UI-Design mit interaktiven Elementen wie Live-Tracking, Feedback-Screens, personalisiertem Dashboard, Übungserinnerungen und Fortschrittsvisualisierungen."
       }
     },
-    // image: picture1,
-    images: [picture1, posturaImage2, posturaImage3],
+    images: [picture1, posturaAusstellung, posturaFrontal3, posturaAllScreens, posturaMehransicht],
     tags: [
       { en: "Physical Prototype", de: "Physischer Prototyp" },
       { en: "UI/UX-Design", de: "UI/UX-Design" },
@@ -193,9 +193,9 @@ export const projectsData: Project[] = [
         de: "Design und Evaluierung eines neuen benutzerfreundlichen und zugänglichen App-Interfaces."
       }
     ],
-    mockups: [myDealzMockup1, myDealzMockup2, myDealzMockup3],
+    mockups: [myDealzMockup1, myDealzMockup2],
     // image: myDealzImage1,
-    images: [myDealzImage1, myDealzImage2, myDealzMockup1, myDealzMockup2, myDealzMockup3],
+    images: [myDealzImage1, myDealzImage2, myDealzMockup1, myDealzMockup2],
     tags: [
       { en: "UI/UX Design", de: "UI/UX-Design" },
       { en: "UI/UX Research", de: "UI/UX-Forschung" },
@@ -279,7 +279,7 @@ export const projectsData: Project[] = [
       }
     ],
     // image: planMeImage2,
-    images: [planMeImage2, planMeImage1, planMeImage3, planMeImage4],
+    images: [planMeImage2, planMeImage1, planMeImage3],
     tags: [
       { en: "UI/UX Design", de: "UI/UX-Design" },
       { en: "UI/UX Research", de: "UI/UX-Forschung" },

@@ -4,7 +4,7 @@ import { TypingAnimation } from "./TypingAnimation";
 import { Container } from "./Container";
 import { useLanguage } from "../contexts/LanguageContext";
 
-const profileImage = "https://res.cloudinary.com/dytgvfkgo/image/upload/v1764183242/IMG_6355_qvtr1a.jpg";
+const profileImage = "https://res.cloudinary.com/dytgvfkgo/image/upload/v1764185869/BildFreigestellt_gutrf1.png";
 
 export function Hero() {
   const { t } = useLanguage();
