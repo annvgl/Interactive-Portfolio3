@@ -129,7 +129,7 @@ export function ProjectDetail({
             {/* Close Button - Round with Better Contrast */}
             <button
               onClick={onClose}
-              className="fixed top-6 left-6 z-50 w-12 h-12 rounded-full bg-[#2C2C2C] shadow-lg flex items-center justify-center text-[#E8E4DF] hover:bg-[#7A6F5D] hover:text-white hover:scale-110 transition-all duration-300"
+              className="fixed top-6 left-6 z-50 w-12 h-12 rounded-full bg-[#2C2C2C] shadow-lg flex items-center justify-center text-[#E8E4DF] hover:bg-[#7A6F5D] hover:text-white hover:scale-110 hover:shadow-2xl transition-all duration-300"
               aria-label={t("close")}
             >
               <X className="w-6 h-6" />
@@ -139,7 +139,7 @@ export function ProjectDetail({
             {hasPrevious && onPrevious && (
               <button
                 onClick={onPrevious}
-                className="fixed left-6 top-1/2 -translate-y-1/2 z-50 w-12 h-12 rounded-full bg-white/90 shadow-lg flex items-center justify-center text-[#2C2C2C] hover:bg-[#7A6F5D] hover:text-white hover:scale-110 transition-all duration-300"
+                className="fixed left-6 top-1/2 -translate-y-1/2 z-50 w-12 h-12 rounded-full bg-white/90 shadow-lg flex items-center justify-center text-[#2C2C2C] hover:bg-[#7A6F5D] hover:text-white hover:scale-110 hover:shadow-2xl transition-all duration-300"
                 aria-label={t("project_prev")}
               >
                 <ChevronLeft className="w-6 h-6" />
@@ -149,7 +149,7 @@ export function ProjectDetail({
             {hasNext && onNext && (
               <button
                 onClick={onNext}
-                className="fixed right-6 top-1/2 -translate-y-1/2 z-50 w-12 h-12 rounded-full bg-white/90 shadow-lg flex items-center justify-center text-[#2C2C2C] hover:bg-[#7A6F5D] hover:text-white hover:scale-110 transition-all duration-300"
+                className="fixed right-6 top-1/2 -translate-y-1/2 z-50 w-12 h-12 rounded-full bg-white/90 shadow-lg flex items-center justify-center text-[#2C2C2C] hover:bg-[#7A6F5D] hover:text-white hover:scale-110 hover:shadow-2xl transition-all duration-300"
                 aria-label={t("project_next")}
               >
                 <ChevronRight className="w-6 h-6" />
