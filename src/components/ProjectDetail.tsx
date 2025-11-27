@@ -502,7 +502,7 @@ export function ProjectDetail({
                     <ul className="space-y-4">
                       {getArrayText(project.approach).map((item, index) => (
                         <li key={index} className="flex items-start">
-                          <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-[#2084C4] mr-3 mt-2"></span>
+                          <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-[#2084C4] mr-3 mt-1.5"></span>
                           <span className="text-[17px] text-[#727272] leading-relaxed">
                             {item}
                           </span>
@@ -526,7 +526,7 @@ export function ProjectDetail({
                     <ul className="space-y-4">
                       {getArrayText(project.outcomes).map((outcome, index) => (
                         <li key={index} className="flex items-start">
-                          <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-[#2084C4] mr-3 mt-2"></span>
+                          <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-[#2084C4] mr-3 mt-1.5"></span>
                           <span className="text-[17px] text-[#727272] leading-relaxed">
                             {outcome}
                           </span>
