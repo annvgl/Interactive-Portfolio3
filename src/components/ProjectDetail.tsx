@@ -455,7 +455,7 @@ export function ProjectDetail({
                         )}
                       </div>
                       {/* posturaAusstellung on the right */}
-                      <div className="lg:col-span-2 p-6 pl-8 flex items-center justify-start">
+                      <div className="lg:col-span-2 py-6 pl-8 pr-0 flex items-center justify-start">
                         <ImageWithFallback
                           src={project.images[1]}
                           alt="Postura Ausstellung"
