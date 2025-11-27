@@ -1,5 +1,6 @@
 // Cloudinary hosted images - ORIGINAL URLs
 const picture1 = "https://res.cloudinary.com/dytgvfkgo/image/upload/v1764230626/HaltungundApp_p3qhoh.png";
+const posturaHeroImage = "https://res.cloudinary.com/dytgvfkgo/image/upload/v1764250743/Bildschirmfoto_2025-11-27_um_14.38.51_hveovq.png";
 const postureImage4 = "https://res.cloudinary.com/dytgvfkgo/image/upload/v1764182965/haltungstracker_cndrrx.png";
 const posturaAusstellung = "https://res.cloudinary.com/dytgvfkgo/image/upload/v1764182691/AusstellungPostura_yqhltw.jpg";
 const posturaFrontal3 = "https://res.cloudinary.com/dytgvfkgo/image/upload/v1764186705/phone_mockup_2_svfbr7.jpg";
@@ -142,7 +143,7 @@ export const projectsData: Project[] = [
         de: "Dualer Ansatz mit mobiler App und physischem Prototyp. Die App bietet Echtzeit-Haltungsüberwachung, personalisierte Übungsempfehlungen und Fortschrittsverfolgung. Der Prototyp liefert taktiles Feedback und unterstützt korrekte Sitzpositionen."
       }
     },
-    images: [picture1, posturaAusstellung, posturaFrontal3, posturaAllScreens, posturaMehransicht],
+    images: [posturaHeroImage, picture1, posturaAusstellung, posturaFrontal3, posturaAllScreens, posturaMehransicht],
     tags: [
       { en: "Physical Prototype", de: "Physischer Prototyp" },
       { en: "UI/UX-Design", de: "UI/UX-Design" },
