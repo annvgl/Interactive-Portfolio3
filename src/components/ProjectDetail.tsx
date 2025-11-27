@@ -360,11 +360,13 @@ export function ProjectDetail({
                   className="mb-8"
                 >
                   <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 items-start">
-                    {/* Supporting Image - Dark Background for Contrast */}
+                    {/* Supporting Image - postureImage4 for Postura */}
                     {project.images.length > 2 && (
                       <div className="lg:col-span-2 p-6 flex items-center justify-center order-2 lg:order-1">
                         <ImageWithFallback
-                          src={project.images[2]}
+                          src={project.title.en === "Postura – Your Posture, Your Strength"
+                            ? "https://res.cloudinary.com/dytgvfkgo/image/upload/v1764182965/haltungstracker_cndrrx.png"
+                            : project.images[2]}
                           alt="Solution visualization"
                           className="w-full h-auto object-contain rounded-xl"
                         />
@@ -405,8 +407,8 @@ export function ProjectDetail({
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-6 md:px-8">
                       <div className="p-4 flex items-center justify-center">
                         <ImageWithFallback
-                          src="https://res.cloudinary.com/dytgvfkgo/image/upload/v1764187553/Mehransicht_cpxmwf.png"
-                          alt="Postura Mehransicht"
+                          src="https://res.cloudinary.com/dytgvfkgo/image/upload/v1764186705/phone_mockup_2_svfbr7.jpg"
+                          alt="Postura Frontal View"
                           className="w-full h-auto object-contain rounded-xl"
                         />
                       </div>
@@ -431,34 +433,44 @@ export function ProjectDetail({
                   className="mb-8"
                 >
                   {project.title.en === "Postura – Your Posture, Your Strength" ? (
-                    <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 items-start">
-                      <div className="lg:col-span-3 p-6 md:p-8">
-                        <h2 className="text-[24px] text-[#232323] mb-4">
-                          {t("project_physical_prototype")}
-                        </h2>
-                        <p className="text-[17px] text-[#727272] leading-relaxed mb-4">
-                          {getText(project.physicalPrototype.description)}
-                        </p>
-                        {project.physicalPrototype.features && project.physicalPrototype.features.length > 0 && (
-                          <ul className="space-y-2 mt-4">
-                            {getArrayText(project.physicalPrototype.features).map((item, index) => (
-                              <li key={index} className="flex items-start">
-                                <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-[#2084C4] mr-3 mt-2"></span>
-                                <span className="text-[17px] text-[#727272] leading-relaxed">{item}</span>
-                              </li>
-                            ))}
-                          </ul>
-                        )}
+                    <>
+                      <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 items-start">
+                        <div className="lg:col-span-3 p-6 md:p-8">
+                          <h2 className="text-[24px] text-[#232323] mb-4">
+                            {t("project_physical_prototype")}
+                          </h2>
+                          <p className="text-[17px] text-[#727272] leading-relaxed mb-4">
+                            {getText(project.physicalPrototype.description)}
+                          </p>
+                          {project.physicalPrototype.features && project.physicalPrototype.features.length > 0 && (
+                            <ul className="space-y-2 mt-4">
+                              {getArrayText(project.physicalPrototype.features).map((item, index) => (
+                                <li key={index} className="flex items-start">
+                                  <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-[#2084C4] mr-3 mt-2"></span>
+                                  <span className="text-[17px] text-[#727272] leading-relaxed">{item}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          )}
+                        </div>
+                        {/* Image on the right */}
+                        <div className="lg:col-span-2 p-6 flex items-center justify-center">
+                          <ImageWithFallback
+                            src={project.images[1]}
+                            alt="Physical Prototype visualization"
+                            className="w-full h-auto object-contain rounded-xl"
+                          />
+                        </div>
                       </div>
-                      {/* Image on the right */}
-                      <div className="lg:col-span-2 p-6 flex items-center justify-center">
+                      {/* posturaMehransicht below */}
+                      <div className="px-6 md:px-8 mt-6">
                         <ImageWithFallback
-                          src={project.images[1]}
-                          alt="Physical Prototype visualization"
+                          src="https://res.cloudinary.com/dytgvfkgo/image/upload/v1764187553/Mehransicht_cpxmwf.png"
+                          alt="Postura Mehransicht"
                           className="w-full h-auto object-contain rounded-xl"
                         />
                       </div>
-                    </div>
+                    </>
                   ) : (
                     <div className="p-6 md:p-8">
                       <h2 className="text-[24px] text-[#232323] mb-4">
