@@ -428,23 +428,56 @@ export function ProjectDetail({
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.7 }}
-                  className="p-6 md:p-8 mb-8"
+                  className="mb-8"
                 >
-                  <h2 className="text-[24px] text-[#232323] mb-4">
-                    {t("project_physical_prototype")}
-                  </h2>
-                  <p className="text-[17px] text-[#727272] leading-relaxed mb-4">
-                    {getText(project.physicalPrototype.description)}
-                  </p>
-                  {project.physicalPrototype.features && project.physicalPrototype.features.length > 0 && (
-                    <ul className="space-y-2 mt-4">
-                      {getArrayText(project.physicalPrototype.features).map((item, index) => (
-                        <li key={index} className="flex items-start">
-                          <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-[#2084C4] mr-3 mt-2"></span>
-                          <span className="text-[17px] text-[#727272] leading-relaxed">{item}</span>
-                        </li>
-                      ))}
-                    </ul>
+                  {project.title.en === "Postura – Your Posture, Your Strength" ? (
+                    <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 items-start">
+                      <div className="lg:col-span-3 p-6 md:p-8">
+                        <h2 className="text-[24px] text-[#232323] mb-4">
+                          {t("project_physical_prototype")}
+                        </h2>
+                        <p className="text-[17px] text-[#727272] leading-relaxed mb-4">
+                          {getText(project.physicalPrototype.description)}
+                        </p>
+                        {project.physicalPrototype.features && project.physicalPrototype.features.length > 0 && (
+                          <ul className="space-y-2 mt-4">
+                            {getArrayText(project.physicalPrototype.features).map((item, index) => (
+                              <li key={index} className="flex items-start">
+                                <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-[#2084C4] mr-3 mt-2"></span>
+                                <span className="text-[17px] text-[#727272] leading-relaxed">{item}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        )}
+                      </div>
+                      {/* Image on the right */}
+                      <div className="lg:col-span-2 p-6 flex items-center justify-center">
+                        <ImageWithFallback
+                          src={project.images[1]}
+                          alt="Physical Prototype visualization"
+                          className="w-full h-auto object-contain rounded-xl"
+                        />
+                      </div>
+                    </div>
+                  ) : (
+                    <div className="p-6 md:p-8">
+                      <h2 className="text-[24px] text-[#232323] mb-4">
+                        {t("project_physical_prototype")}
+                      </h2>
+                      <p className="text-[17px] text-[#727272] leading-relaxed mb-4">
+                        {getText(project.physicalPrototype.description)}
+                      </p>
+                      {project.physicalPrototype.features && project.physicalPrototype.features.length > 0 && (
+                        <ul className="space-y-2 mt-4">
+                          {getArrayText(project.physicalPrototype.features).map((item, index) => (
+                            <li key={index} className="flex items-start">
+                              <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-[#2084C4] mr-3 mt-2"></span>
+                              <span className="text-[17px] text-[#727272] leading-relaxed">{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                    </div>
                   )}
                 </motion.div>
               )}
@@ -483,48 +516,19 @@ export function ProjectDetail({
                     transition={{ duration: 0.5, delay: 0.9 }}
                     className="p-6 md:p-8"
                   >
-                    {project.title.en === "Postura – Your Posture, Your Strength" ? (
-                      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
-                        <div className="lg:col-span-6">
-                          <h2 className="text-[24px] text-[#232323] mb-2">
-                            {t("project_outcomes")}
-                          </h2>
-                          <ul className="space-y-3">
-                            {getArrayText(project.outcomes).map((outcome, index) => (
-                              <li key={index} className="flex items-start">
-                                <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-[#2084C4] mr-3 mt-2"></span>
-                                <span className="text-[17px] text-[#727272] leading-relaxed">
-                                  {outcome}
-                                </span>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                        <div className="lg:col-span-2 p-4 flex items-center justify-center">
-                          <ImageWithFallback
-                            src={project.images[1]}
-                            alt="HaltungsTracker visualization"
-                            className="w-full h-auto object-contain rounded-xl"
-                          />
-                        </div>
-                      </div>
-                    ) : (
-                      <>
-                        <h2 className="text-[24px] text-[#232323] mb-4">
-                          {t("project_outcomes")}
-                        </h2>
-                        <ul className="space-y-3">
-                          {getArrayText(project.outcomes).map((outcome, index) => (
-                            <li key={index} className="flex items-start">
-                              <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-[#2084C4] mr-3 mt-2"></span>
-                              <span className="text-[17px] text-[#727272] leading-relaxed">
-                                {outcome}
-                              </span>
-                            </li>
-                          ))}
-                        </ul>
-                      </>
-                    )}
+                    <h2 className="text-[24px] text-[#232323] mb-4">
+                      {t("project_outcomes")}
+                    </h2>
+                    <ul className="space-y-3">
+                      {getArrayText(project.outcomes).map((outcome, index) => (
+                        <li key={index} className="flex items-start">
+                          <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-[#2084C4] mr-3 mt-2"></span>
+                          <span className="text-[17px] text-[#727272] leading-relaxed">
+                            {outcome}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
                   </motion.div>
                 )}
               </div>
