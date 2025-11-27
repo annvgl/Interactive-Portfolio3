@@ -485,7 +485,7 @@ export function ProjectDetail({
                       </div>
                       <div className="p-4 flex items-center justify-center">
                         <ImageWithFallback
-                          src="https://res.cloudinary.com/dytgvfkgo/image/upload/v1764186705/phone_mockup_2_svfbr7.jpg"
+                          src="https://res.cloudinary.com/dytgvfkgo/image/upload/v1764180514/phone_mockup_5_gsrlmr.jpg"
                           alt="Postura Phone Mockup"
                           className="w-full h-auto object-contain rounded-xl"
                         />
