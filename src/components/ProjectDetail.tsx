@@ -454,13 +454,15 @@ export function ProjectDetail({
                           </ul>
                         )}
                       </div>
-                      {/* posturaAusstellung on the right */}
-                      <div className="py-6 pl-0 pr-0 flex items-center justify-end">
-                        <ImageWithFallback
-                          src={project.images[1]}
-                          alt="Postura Ausstellung"
-                          className="w-full h-auto object-contain rounded-xl"
-                        />
+                      {/* posturaAusstellung on the right - same width as posturaAllScreens above */}
+                      <div className="px-8 md:px-10 py-6 flex items-center justify-center">
+                        <div className="p-4">
+                          <ImageWithFallback
+                            src={project.images[1]}
+                            alt="Postura Ausstellung"
+                            className="w-full h-auto object-contain rounded-xl"
+                          />
+                        </div>
                       </div>
                     </div>
                   ) : (
