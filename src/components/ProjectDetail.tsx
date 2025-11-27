@@ -129,7 +129,7 @@ export function ProjectDetail({
             {/* Close Button - Round with Better Contrast */}
             <button
               onClick={onClose}
-              className="fixed top-6 left-6 z-50 w-12 h-12 rounded-full bg-[#2C2C2C] shadow-lg flex items-center justify-center text-white hover:bg-[#7A6F5D] hover:scale-110 transition-all duration-300"
+              className="fixed top-6 left-6 z-50 w-12 h-12 rounded-full bg-[#2C2C2C] shadow-lg flex items-center justify-center text-[#E8E4DF] hover:bg-[#7A6F5D] hover:text-white hover:scale-110 transition-all duration-300"
               aria-label={t("close")}
             >
               <X className="w-6 h-6" />
