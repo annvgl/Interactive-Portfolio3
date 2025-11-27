@@ -42,6 +42,22 @@ export interface Project {
   finalResults?: MultilingualText;
   projectCategory: string;
   featured?: boolean;
+  // New structure for enhanced project layout
+  researchInsights?: {
+    methods?: MultilingualText[];
+    findings?: MultilingualText[];
+    personas?: MultilingualText;
+  };
+  designProcess?: {
+    description: MultilingualText;
+    wireframes?: string[];
+    iterations?: MultilingualText[];
+  };
+  physicalPrototype?: {
+    description: MultilingualText;
+    features?: MultilingualText[];
+    testing?: MultilingualText;
+  };
 }
 
 export const projectsData: Project[] = [
@@ -112,6 +128,18 @@ export const projectsData: Project[] = [
       description: {
         en: "Clean, accessible UI design with interactive elements including live tracking, feedback screens, personalized dashboard, exercise reminders, and progress visualizations.",
         de: "Sauberes, zugängliches UI-Design mit interaktiven Elementen wie Live-Tracking, Feedback-Screens, personalisiertem Dashboard, Übungserinnerungen und Fortschrittsvisualisierungen."
+      }
+    },
+    designProcess: {
+      description: {
+        en: "Clean, accessible UI design with interactive elements including live tracking, feedback screens, personalized dashboard, exercise reminders, and progress visualizations.",
+        de: "Sauberes, zugängliches UI-Design mit interaktiven Elementen wie Live-Tracking, Feedback-Screens, personalisiertem Dashboard, Übungserinnerungen und Fortschrittsvisualisierungen."
+      }
+    },
+    physicalPrototype: {
+      description: {
+        en: "Dual-approach with mobile app and physical prototype. App provides real-time posture monitoring, personalized exercise recommendations, and progress tracking. Prototype delivers tactile feedback, supporting correct sitting positions.",
+        de: "Dualer Ansatz mit mobiler App und physischem Prototyp. Die App bietet Echtzeit-Haltungsüberwachung, personalisierte Übungsempfehlungen und Fortschrittsverfolgung. Der Prototyp liefert taktiles Feedback und unterstützt korrekte Sitzpositionen."
       }
     },
     images: [picture1, posturaAusstellung, posturaFrontal3, posturaAllScreens, posturaMehransicht],

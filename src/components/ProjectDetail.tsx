@@ -294,12 +294,69 @@ export function ProjectDetail({
                 </motion.div>
               )}
 
+              {/* My Role - Now positioned earlier! */}
+              {project.role && (
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.3 }}
+                  className="p-6 md:p-8 mb-8"
+                >
+                  <h2 className="text-[24px] text-[#232323] mb-4">
+                    {t("project_role")}
+                  </h2>
+                  <p className="text-[17px] text-[#727272] leading-relaxed">
+                    {getText(project.role)}
+                  </p>
+                </motion.div>
+              )}
+
+              {/* Research & Insights - NEW SECTION */}
+              {project.researchInsights && (
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.4 }}
+                  className="p-6 md:p-8 mb-8"
+                >
+                  <h2 className="text-[24px] text-[#232323] mb-4">
+                    {t("project_research")}
+                  </h2>
+                  {project.researchInsights.methods && project.researchInsights.methods.length > 0 && (
+                    <div className="mb-4">
+                      <h3 className="text-[20px] text-[#2C2C2C] mb-3 font-medium">Methods</h3>
+                      <ul className="space-y-2">
+                        {getArrayText(project.researchInsights.methods).map((item, index) => (
+                          <li key={index} className="flex items-start">
+                            <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-[#2084C4] mr-3 mt-2"></span>
+                            <span className="text-[17px] text-[#727272] leading-relaxed">{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                  {project.researchInsights.findings && project.researchInsights.findings.length > 0 && (
+                    <div className="mb-4">
+                      <h3 className="text-[20px] text-[#2C2C2C] mb-3 font-medium">Key Findings</h3>
+                      <ul className="space-y-2">
+                        {getArrayText(project.researchInsights.findings).map((item, index) => (
+                          <li key={index} className="flex items-start">
+                            <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-[#2084C4] mr-3 mt-2"></span>
+                            <span className="text-[17px] text-[#727272] leading-relaxed">{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                </motion.div>
+              )}
+
               {/* The Solution - Reversed Layout for Visual Flow */}
               {project.solution && (
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.3 }}
+                  transition={{ duration: 0.5, delay: 0.5 }}
                   className="mb-8"
                 >
                   <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 items-start">
@@ -326,20 +383,69 @@ export function ProjectDetail({
                 </motion.div>
               )}
 
-              {/* My Role - Flowing Text Block */}
-              {project.role && (
+              {/* Design Process - Renamed from UI/UX Design Aspects */}
+              {project.designProcess && (
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.4 }}
+                  transition={{ duration: 0.5, delay: 0.6 }}
+                  className="mb-8"
+                >
+                  <div className="p-6 md:p-8 mb-6">
+                    <h2 className="text-[24px] text-[#232323] mb-4">
+                      {t("project_design_process")}
+                    </h2>
+                    <p className="text-[17px] text-[#727272] leading-relaxed">
+                      {getText(project.designProcess.description)}
+                    </p>
+                  </div>
+
+                  {/* Design Process Images for Postura Project */}
+                  {project.title.en === "Postura – Your Posture, Your Strength" && (
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-6 md:px-8">
+                      <div className="p-4 flex items-center justify-center">
+                        <ImageWithFallback
+                          src="https://res.cloudinary.com/dytgvfkgo/image/upload/v1764187553/Mehransicht_cpxmwf.png"
+                          alt="Postura Mehransicht"
+                          className="w-full h-auto object-contain rounded-xl"
+                        />
+                      </div>
+                      <div className="p-4 flex items-center justify-center">
+                        <ImageWithFallback
+                          src="https://res.cloudinary.com/dytgvfkgo/image/upload/v1764180514/phone_mockup_5_gsrlmr.jpg"
+                          alt="Postura Phone Mockup"
+                          className="w-full h-auto object-contain rounded-xl"
+                        />
+                      </div>
+                    </div>
+                  )}
+                </motion.div>
+              )}
+
+              {/* Physical Prototype - NEW SECTION */}
+              {project.physicalPrototype && (
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.7 }}
                   className="p-6 md:p-8 mb-8"
                 >
                   <h2 className="text-[24px] text-[#232323] mb-4">
-                    {t("project_role")}
+                    {t("project_physical_prototype")}
                   </h2>
-                  <p className="text-[17px] text-[#727272] leading-relaxed">
-                    {getText(project.role)}
+                  <p className="text-[17px] text-[#727272] leading-relaxed mb-4">
+                    {getText(project.physicalPrototype.description)}
                   </p>
+                  {project.physicalPrototype.features && project.physicalPrototype.features.length > 0 && (
+                    <ul className="space-y-2 mt-4">
+                      {getArrayText(project.physicalPrototype.features).map((item, index) => (
+                        <li key={index} className="flex items-start">
+                          <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-[#2084C4] mr-3 mt-2"></span>
+                          <span className="text-[17px] text-[#727272] leading-relaxed">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </motion.div>
               )}
 
@@ -350,7 +456,7 @@ export function ProjectDetail({
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.5 }}
+                    transition={{ duration: 0.5, delay: 0.8 }}
                     className="p-6 md:p-8"
                   >
                     <h2 className="text-[24px] text-[#232323] mb-4">
@@ -369,12 +475,12 @@ export function ProjectDetail({
                   </motion.div>
                 )}
 
-                {/* Outcomes */}
+                {/* Key Outcomes - Renamed from Outcomes */}
                 {project.outcomes && project.outcomes.length > 0 && (
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.6 }}
+                    transition={{ duration: 0.5, delay: 0.9 }}
                     className="p-6 md:p-8"
                   >
                     {project.title.en === "Postura – Your Posture, Your Strength" ? (
@@ -428,7 +534,7 @@ export function ProjectDetail({
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.7 }}
+                  transition={{ duration: 0.5, delay: 1.0 }}
                   className="mb-8"
                 >
                   <h2 className="text-[24px] text-[#232323] mb-5 px-1">
@@ -456,51 +562,12 @@ export function ProjectDetail({
                 </motion.div>
               )}
 
-              {/* UI/UX Design Aspects - Subtle Background */}
-              {project.uiUxAspects && (
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.8 }}
-                  className="mb-8"
-                >
-                  <div className="p-6 md:p-8 mb-6">
-                    <h2 className="text-[24px] text-[#232323] mb-4">
-                      {t("project_uiux")}
-                    </h2>
-                    <p className="text-[17px] text-[#727272] leading-relaxed">
-                      {getText(project.uiUxAspects.description)}
-                    </p>
-                  </div>
-
-                  {/* UI/UX Images for Postura Project */}
-                  {project.title.en === "Postura – Your Posture, Your Strength" && (
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-6 md:px-8">
-                      <div className="p-4 flex items-center justify-center">
-                        <ImageWithFallback
-                          src="https://res.cloudinary.com/dytgvfkgo/image/upload/v1764187553/Mehransicht_cpxmwf.png"
-                          alt="Postura Mehransicht"
-                          className="w-full h-auto object-contain rounded-xl"
-                        />
-                      </div>
-                      <div className="p-4 flex items-center justify-center">
-                        <ImageWithFallback
-                          src="https://res.cloudinary.com/dytgvfkgo/image/upload/v1764180514/phone_mockup_5_gsrlmr.jpg"
-                          alt="Postura Phone Mockup"
-                          className="w-full h-auto object-contain rounded-xl"
-                        />
-                      </div>
-                    </div>
-                  )}
-                </motion.div>
-              )}
-
               {/* Final Results - Highlighted but Minimal */}
               {project.finalResults && (
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.9 }}
+                  transition={{ duration: 0.5, delay: 1.1 }}
                   className="p-6 md:p-8 border border-[#E1EBF3]/40 mb-12"
                 >
                   <h2 className="text-[24px] text-[#232323] mb-4">
