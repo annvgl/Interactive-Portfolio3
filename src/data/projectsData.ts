@@ -1,5 +1,5 @@
 // Cloudinary hosted images - ORIGINAL URLs
-const picture1 = "https://res.cloudinary.com/dytgvfkgo/image/upload/v1764183242/IMG_6355_qvtr1a.jpg";
+const picture1 = "https://res.cloudinary.com/dytgvfkgo/image/upload/v1764230626/HaltungundApp_p3qhoh.png";
 const postureImage4 = "https://res.cloudinary.com/dytgvfkgo/image/upload/v1764182965/haltungstracker_cndrrx.png";
 const posturaAusstellung = "https://res.cloudinary.com/dytgvfkgo/image/upload/v1764182691/AusstellungPostura_yqhltw.jpg";
 const posturaFrontal3 = "https://res.cloudinary.com/dytgvfkgo/image/upload/v1764186705/phone_mockup_2_svfbr7.jpg";
