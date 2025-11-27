@@ -284,7 +284,9 @@ export function ProjectDetail({
                     {project.images.length > 1 && (
                       <div className="lg:col-span-2 p-4 flex items-center justify-center">
                         <ImageWithFallback
-                          src={project.title.en === "Postura – Your Posture, Your Strength" ? HaltungsTracker : project.images[1]}
+                          src={project.title.en === "Postura – Your Posture, Your Strength" 
+                            ? "https://res.cloudinary.com/dytgvfkgo/image/upload/v1764250743/Bildschirmfoto_2025-11-27_um_14.38.51_hveovq.png"
+                            : project.images[1]}
                           alt="Challenge visualization"
                           className="w-[400px] h-auto object-contain rounded-xl"
                         />
@@ -360,12 +362,12 @@ export function ProjectDetail({
                   className="mb-8"
                 >
                   <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 items-start">
-                    {/* Supporting Image - posturaHeroImage for Postura */}
+                    {/* Supporting Image - postureImage4 for Postura */}
                     {project.images.length > 2 && (
                       <div className="lg:col-span-2 p-6 flex items-center justify-center order-2 lg:order-1">
                         <ImageWithFallback
                           src={project.title.en === "Postura – Your Posture, Your Strength"
-                            ? "https://res.cloudinary.com/dytgvfkgo/image/upload/v1764250743/Bildschirmfoto_2025-11-27_um_14.38.51_hveovq.png"
+                            ? "https://res.cloudinary.com/dytgvfkgo/image/upload/v1764182965/haltungstracker_cndrrx.png"
                             : project.images[2]}
                           alt="Solution visualization"
                           className="w-full h-auto object-contain rounded-xl"
