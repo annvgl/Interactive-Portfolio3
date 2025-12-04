@@ -58,7 +58,7 @@ export function About() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="lg:col-span-2 px-8 lg:px-12 py-12 lg:py-20 flex flex-col justify-center bg-white"
+            className="lg:col-span-2 px-8 lg:px-12 py-12 lg:py-20 flex flex-col justify-center"
           >
             <div className="space-y-6 text-[#6B6B6B] text-base lg:text-lg leading-relaxed">
               <p>
@@ -90,12 +90,12 @@ export function About() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.9 }}
-            className="lg:col-span-3 relative min-h-[500px] lg:min-h-[700px]"
+            className="lg:col-span-3 relative h-[500px] lg:h-[600px]"
           >
             <img
               src={AboutMe}
               alt="Ann Vogel"
-              className="w-full h-full object-cover object-center"
+              className="w-full h-full object-cover object-top"
             />
             <FloatingWords />
           </motion.div>
