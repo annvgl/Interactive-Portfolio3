@@ -58,7 +58,7 @@ export function About() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="lg:col-span-2 px-8 lg:px-16 py-16 lg:py-20 flex flex-col justify-between"
+            className="lg:col-span-2 px-8 lg:px-16 py-16 lg:py-20 flex flex-col justify-center gap-16"
           >
             <div className="space-y-6 text-[#6B6B6B] text-base lg:text-lg leading-relaxed">
               <p>
@@ -71,7 +71,7 @@ export function About() {
                 {t("about_text3")}
               </p>
             </div>
-            <div className="flex items-center gap-6 mt-20">
+            <div className="flex items-center gap-6">
               <button
                 onClick={() => document.getElementById("cv")?.scrollIntoView({ behavior: "smooth" })}
                 className="group relative px-8 py-4 bg-[#7A6F5D] text-white overflow-hidden transition-all hover:px-10 rounded-2xl shadow-lg hover:shadow-xl hover:shadow-[#7A6F5D]/30"
