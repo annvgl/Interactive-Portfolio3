@@ -50,17 +50,17 @@ export function About() {
           </h2>
         </motion.div>
 
-        {/* Image and Content - Perfect Alignment */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
+        {/* Image and Content - Clean Layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-0 mb-20 -mx-4 lg:-mx-12">
           {/* Text Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="space-y-6"
+            className="lg:col-span-2 px-8 lg:px-12 py-12 lg:py-20 flex flex-col justify-center bg-white"
           >
-            <div className="space-y-4 text-[#6B6B6B] text-lg leading-relaxed">
+            <div className="space-y-6 text-[#6B6B6B] text-base lg:text-lg leading-relaxed">
               <p>
                 {t("about_text1")}
               </p>
@@ -71,7 +71,7 @@ export function About() {
                 {t("about_text3")}
               </p>
             </div>
-            <div className="flex items-center gap-6 pt-4">
+            <div className="flex items-center gap-6 pt-8">
               <button
                 onClick={() => document.getElementById("cv")?.scrollIntoView({ behavior: "smooth" })}
                 className="group relative px-8 py-4 bg-[#7A6F5D] text-white overflow-hidden transition-all hover:px-10 rounded-2xl shadow-lg hover:shadow-xl hover:shadow-[#7A6F5D]/30"
@@ -84,18 +84,18 @@ export function About() {
             </div>
           </motion.div>
 
-          {/* Image */}
+          {/* Image - Full Height */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.9 }}
-            className="relative"
+            className="lg:col-span-3 relative min-h-[500px] lg:min-h-[700px]"
           >
             <img
               src={AboutMe}
               alt="Ann Vogel"
-              className="w-full h-auto object-cover object-center rounded-3xl shadow-2xl"
+              className="w-full h-full object-cover object-center"
             />
             <FloatingWords />
           </motion.div>
