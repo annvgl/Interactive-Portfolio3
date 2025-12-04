@@ -38,23 +38,20 @@ export function About() {
   return (
     <Section id="about" className="bg-gradient-to-b from-white via-[#F5F3F0] to-white">
       <Container>
-        {/* Title Section with Background */}
-        <div className="bg-[#F5F3F0] -mx-4 lg:-mx-12 px-4 lg:px-12 pb-16 mb-0">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center pt-8"
-          >
-            <h2 className="text-5xl md:text-6xl mb-0 text-[#2C2C2C]">
-              <TypingAnimation text={t("about_title")} speed={70} showCursor={false} />
-            </h2>
-          </motion.div>
-        </div>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-5xl md:text-6xl mb-6 text-[#2C2C2C]">
+            <TypingAnimation text={t("about_title")} speed={70} showCursor={false} />
+          </h2>
+        </motion.div>
 
         {/* Image and Content - Clean Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-0 mb-20 -mx-4 lg:-mx-12">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-0 mb-20 -mx-4 lg:-mx-12 bg-[#F5F3F0]">
           {/* Text Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -74,7 +71,7 @@ export function About() {
                 {t("about_text3")}
               </p>
             </div>
-            <div className="flex items-center gap-6 pt-8">
+            <div className="flex items-center gap-6 pt-12">
               <button
                 onClick={() => document.getElementById("cv")?.scrollIntoView({ behavior: "smooth" })}
                 className="group relative px-8 py-4 bg-[#7A6F5D] text-white overflow-hidden transition-all hover:px-10 rounded-2xl shadow-lg hover:shadow-xl hover:shadow-[#7A6F5D]/30"
