@@ -59,7 +59,7 @@ export function Navigation() {
         <div className="flex items-center justify-between py-4">
           {/* Logo */}
           <motion.div
-            className="relative group cursor-pointer"
+            className="relative group cursor-pointer -ml-2"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
