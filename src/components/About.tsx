@@ -43,7 +43,7 @@ export function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16 mt-8"
+          className="text-center mb-16"
         >
           <h2 className="text-5xl md:text-6xl mb-6 text-[#2C2C2C]">
             <TypingAnimation text={t("about_title")} speed={70} showCursor={false} />
