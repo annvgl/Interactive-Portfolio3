@@ -1,7 +1,19 @@
 {
-    "buildCommand": "npm run build",
+    "version": 2,
+    "buildCommand": "npm install && npm run build",
     "outputDirectory": "dist",
-    "framework": "vite",
+    "framework": null,
+    "installCommand": "npm install --legacy-peer-deps",
+    "functions": {
+        "api/**/*.js": {
+            "runtime": "nodejs20.x"
+        }
+    },
+    "build": {
+        "env": {
+            "NODE_VERSION": "20"
+        }
+    },
     "rewrites": [
         {
             "source": "/(.*)",
