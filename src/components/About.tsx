@@ -51,14 +51,14 @@ export function About() {
         </motion.div>
 
         {/* Image and Content - Perfect Alignment */}
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 items-end mb-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
           {/* Text Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="space-y-6 lg:col-span-1"
+            className="space-y-6"
           >
             <div className="space-y-4 text-[#6B6B6B] text-lg leading-relaxed">
               <p>
@@ -90,12 +90,12 @@ export function About() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.9 }}
-            className="relative lg:col-span-3 lg:-mr-8"
+            className="relative"
           >
             <img
               src={AboutMe}
               alt="Ann Vogel"
-              className="w-full h-auto object-cover object-bottom"
+              className="w-full h-auto object-cover object-center rounded-3xl shadow-2xl"
             />
             <FloatingWords />
           </motion.div>
