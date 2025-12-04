@@ -1,4 +1,5 @@
-import { createContext, useContext, useState, ReactNode } from "react";
+import { createContext, useContext, useState } from "react";
+import type * as React from "react";
 
 type Language = "en" | "de";
 
@@ -8,7 +9,7 @@ interface LanguageContextType {
   t: (key: string) => string;
 }
 
-const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
+const LanguageContext = createContext(undefined as LanguageContextType | undefined);
 
 const translations = {
   en: {
@@ -197,8 +198,8 @@ const translations = {
   },
 };
 
-export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguage] = useState<Language>("en");
+export function LanguageProvider({ children }: { children: React.JSX.Element | React.JSX.Element[] }) {
+  const [language, setLanguage] = useState("en" as Language);
 
   const t = (key: string): string => {
     return translations[language][key as keyof typeof translations.en] || key;

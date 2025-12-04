@@ -114,8 +114,8 @@ const categoryIcons = {
 };
 
 export function Skills() {
-  const [expandedSkill, setExpandedSkill] = useState<number | null>(null);
-  const [activeCategory, setActiveCategory] = useState<string>("All");
+  const [expandedSkill, setExpandedSkill] = useState(null as number | null);
+  const [activeCategory, setActiveCategory] = useState("All");
   const { language, t } = useLanguage();
 
   const categories = [t("category_all"), ...Array.from(new Set(skills.map(s => s.category[language])))];

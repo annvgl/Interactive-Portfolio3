@@ -18,7 +18,7 @@ const categories = [
 
 export function Projects() {
   const [activeCategory, setActiveCategory] = useState("All");
-  const [selectedProjectIndex, setSelectedProjectIndex] = useState<number | null>(null);
+  const [selectedProjectIndex, setSelectedProjectIndex] = useState(null as number | null);
   const { t, language } = useLanguage();
 
   // Filter projects based on active category
@@ -79,16 +79,17 @@ export function Projects() {
           {filteredProjects.map((project, index) => {
             const actualIndex = projectsData.findIndex(p => p === project);
             return (
-              <ProjectCard
-                key={actualIndex}
-                title={project.title[language]}
-                category={project.category[language]}
-                description={project.description[language]}
-                image={project.images[0]}
-                tags={project.tags.map(tag => tag[language])}
-                index={index}
-                onClick={() => setSelectedProjectIndex(actualIndex)}
-              />
+              <div key={actualIndex}>
+                <ProjectCard
+                  title={project.title[language]}
+                  category={project.category[language]}
+                  description={project.description[language]}
+                  image={project.images[0]}
+                  tags={project.tags.map(tag => tag[language])}
+                  index={index}
+                  onClick={() => setSelectedProjectIndex(actualIndex)}
+                />
+              </div>
             );
           })}
         </Grid>

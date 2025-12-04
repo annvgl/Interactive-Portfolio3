@@ -20,12 +20,11 @@ const Form = FormProvider;
 
 type FormFieldContextValue<
   TFieldValues extends FieldValues = FieldValues,
-  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
-> = {
-  name: TName;
-};
+  TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,> = {
+    name: TName;
+  };
 
-const FormFieldContext = React.createContext<FormFieldContextValue>(
+const FormFieldContext = React.createContext(
   {} as FormFieldContextValue,
 );
 
@@ -69,7 +68,7 @@ type FormItemContextValue = {
   id: string;
 };
 
-const FormItemContext = React.createContext<FormItemContextValue>(
+const FormItemContext = React.createContext(
   {} as FormItemContextValue,
 );
 

@@ -52,7 +52,7 @@ export function CurriculumVitae({ language }: CVProps) {
       bioladenTitle: "Bioladen Naturgut",
       bioladenPosition: "Einzelhandel",
       bioladenDescription: "Kundenbetreuung und Verkauf im Einzelhandel",
-      daimlerTitle: "Daimler",
+      daimlerTitle: "Mercede Benz Group",
       daimlerPosition: "Ferienjob",
       daimlerDescription: "Praktische Erfahrung in der Automobilindustrie"
     },
@@ -98,7 +98,7 @@ export function CurriculumVitae({ language }: CVProps) {
       bioladenTitle: "Bioladen Naturgut",
       bioladenPosition: "Retail Position",
       bioladenDescription: "Customer service and sales in retail environment",
-      daimlerTitle: "Daimler",
+      daimlerTitle: "Mercedes Benz Group",
       daimlerPosition: "Summer Job",
       daimlerDescription: "Hands-on experience in the automotive industry"
     }

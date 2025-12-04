@@ -34,7 +34,7 @@ export function About() {
       description: t("about_value4_desc")
     }
   ];
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [hoveredIndex, setHoveredIndex] = useState(null as number | null);
   return (
     <Section id="about" className="bg-gradient-to-b from-white via-[#F5F3F0] to-white">
       <Container>
