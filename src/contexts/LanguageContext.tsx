@@ -63,7 +63,7 @@ const translations = {
     skills_prototyping: "Prototyping & Development",
 
     // About
-    about_title: "Hi, I'm Ann Vogel",
+    about_title: "Hello, I'm Ann Vogel",
     about_description: "I'm a passionate Interaction Designer specializing in UI/UX design with a deep commitment to creating meaningful, user-centered digital experiences. My approach combines empathy-driven research with thoughtful design solutions that solve real problems and improve people's daily lives.",
     about_philosophy_title: "Design Philosophy",
     about_philosophy: "I believe great design starts with understanding people—their needs, frustrations, and aspirations. Every project I undertake begins with thorough user research and empathy mapping, ensuring that solutions are not just visually appealing, but truly functional and accessible.",
@@ -155,7 +155,7 @@ const translations = {
     skills_prototyping: "Prototyping & Entwicklung",
 
     // About
-    about_title: "Hi, ich bin Ann Vogel",
+    about_title: "Hallo, ich bin Ann Vogel",
     about_description: "Ich bin eine leidenschaftliche Interaction Designerin mit Spezialisierung auf UI/UX-Design und einem tiefen Engagement für die Schaffung bedeutungsvoller, nutzerzentrierter digitaler Erlebnisse. Mein Ansatz kombiniert empathiegetriebene Forschung mit durchdachten Design-Lösungen, die echte Probleme lösen und das tägliche Leben der Menschen verbessern.",
     about_philosophy_title: "Design-Philosophie",
     about_philosophy: "Ich glaube, dass großartiges Design damit beginnt, Menschen zu verstehen – ihre Bedürfnisse, Frustrationen und Bestrebungen. Jedes Projekt, das ich angehe, beginnt mit gründlicher Nutzerforschung und Empathy Mapping, um sicherzustellen, dass Lösungen nicht nur visuell ansprechend, sondern wirklich funktional und zugänglich sind.",
