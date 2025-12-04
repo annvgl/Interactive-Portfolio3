@@ -71,7 +71,7 @@ export function About() {
                 {t("about_text3")}
               </p>
             </div>
-            <div className="flex items-center gap-6 mt-12">
+            <div className="flex items-center gap-6 mt-16">
               <button
                 onClick={() => document.getElementById("cv")?.scrollIntoView({ behavior: "smooth" })}
                 className="group relative px-8 py-4 bg-[#7A6F5D] text-white overflow-hidden transition-all hover:px-10 rounded-2xl shadow-lg hover:shadow-xl hover:shadow-[#7A6F5D]/30"
