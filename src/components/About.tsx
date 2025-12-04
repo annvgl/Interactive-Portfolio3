@@ -58,9 +58,10 @@ export function About() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="lg:col-span-2 px-8 lg:px-16 py-16 lg:py-20 flex flex-col justify-center gap-16"
+            className="lg:col-span-2 px-8 lg:px-16 py-16 lg:py-20 flex flex-col justify-center"
           >
-            <div className="space-y-6 text-[#6B6B6B] text-base lg:text-lg leading-relaxed">
+            {/* Text and Button with consistent spacing */}
+            <div className="space-y-6 text-[#6B6B6B] text-base lg:text-lg leading-relaxed mb-16">
               <p>
                 {t("about_text1")}
               </p>
