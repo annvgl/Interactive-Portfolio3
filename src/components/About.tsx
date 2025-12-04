@@ -51,7 +51,7 @@ export function About() {
         </motion.div>
 
         {/* Image and Content - Clean Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-0 mb-20 -mx-4 lg:-mx-12 bg-[#F5F3F0]">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-0 mb-20 -mx-4 lg:-mx-12 bg-[#F5F3F0] rounded-2xl overflow-hidden">
           {/* Text Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
