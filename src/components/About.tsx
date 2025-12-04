@@ -90,13 +90,12 @@ export function About() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.9 }}
-            className="relative lg:col-span-3 lg:-mr-8 h-[800px] lg:h-screen overflow-hidden"
+            className="relative lg:col-span-3 lg:-mr-8"
           >
             <img
               src={AboutMe}
               alt="Ann Vogel"
-              className="w-full h-full object-cover object-bottom"
-
+              className="w-full h-auto object-cover object-bottom"
             />
             <FloatingWords />
           </motion.div>
@@ -114,8 +113,8 @@ export function About() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{
-                  y: -5,
-                  scale: 1.5,
+                  y: -8,
+                  scale: 1.02,
                   transition: { duration: 0.3 }
                 }}
                 className="text-center group bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl hover:shadow-[#7A6F5D]/10 transition-all duration-300 border-2 border-[#E8E4DF]/50 hover:border-[#7A6F5D]/50"
