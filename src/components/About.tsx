@@ -38,17 +38,20 @@ export function About() {
   return (
     <Section id="about" className="bg-gradient-to-b from-white via-[#F5F3F0] to-white">
       <Container>
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-5xl md:text-6xl mb-6 text-[#2C2C2C]">
-            <TypingAnimation text={t("about_title")} speed={70} showCursor={false} />
-          </h2>
-        </motion.div>
+        {/* Title Section with Background */}
+        <div className="bg-[#F5F3F0] -mx-4 lg:-mx-12 px-4 lg:px-12 pb-16 mb-0">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center pt-8"
+          >
+            <h2 className="text-5xl md:text-6xl mb-0 text-[#2C2C2C]">
+              <TypingAnimation text={t("about_title")} speed={70} showCursor={false} />
+            </h2>
+          </motion.div>
+        </div>
 
         {/* Image and Content - Clean Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-0 mb-20 -mx-4 lg:-mx-12">
@@ -90,12 +93,12 @@ export function About() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.9 }}
-            className="lg:col-span-3 relative h-[500px] lg:h-[600px]"
+            className="lg:col-span-3 relative min-h-[500px] lg:min-h-[700px]"
           >
             <img
               src={AboutMe}
               alt="Ann Vogel"
-              className="w-full h-full object-cover object-top"
+              className="w-full h-full object-cover object-center"
             />
             <FloatingWords />
           </motion.div>
