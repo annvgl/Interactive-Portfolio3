@@ -80,7 +80,7 @@ const translations = {
     about_value4_desc: "Designing thoughtful and easy interactive solutions that make everyday life simpler and better for users.",
     about_text1: "Hi, I'm Ann Vogel, an Interaction Designer dedicated to creating human-centered designs that make everyday tasks easier and more manageable. With a background in UI/UX design and physical prototyping, I combine digital expertise with hands-on innovation to deliver comprehensive design solutions.",
     about_text2: "I believe great design begins with understanding people—their needs, frustrations, and aspirations. Every project I undertake starts with thorough user research and empathy mapping to ensure solutions are not only visually appealing but truly functional and accessible. My approach emphasizes iterative testing and user feedback, allowing me to refine designs until they truly resonate with the people who use them.",
-    about_text3: "My passion lies in bridging human needs with technology through thoughtful, intuitive designs that empower users and improve daily life. Whether I'm developing mobile applications, creating interactive installations, or building physical prototypes, I focus on crafting experiences that feel natural and meaningful. I'm constantly exploring new ways to make complex systems simple and delightful to use.",
+    about_text3: "My passion lies in bridging human needs with technology through thoughtful, intuitive designs that empower users and improve daily life. I focus on crafting experiences that feel natural and meaningful.",
 
     // Footer
     footer_connect: "Let's Connect",
