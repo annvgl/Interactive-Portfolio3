@@ -95,6 +95,7 @@ const translations = {
 
     // Personal Words / Hobbies
     floating_words_title: "What I Like",
+    hover_hint: "Hover here...",
     hobby_animals: "Animals",
     hobby_traveling: "Traveling",
     hobby_reading: "Reading",
@@ -187,6 +188,7 @@ const translations = {
 
     // Personal Words / Hobbies
     floating_words_title: "Was ich mag",
+    hover_hint: "Hover hier...",
     hobby_animals: "Tiere",
     hobby_traveling: "Reisen",
     hobby_reading: "Lesen",

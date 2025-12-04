@@ -35,6 +35,37 @@ export function FloatingWords() {
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
         >
+            {/* Hover Hint - verschwindet beim Hovern */}
+            <motion.div
+                initial={{ opacity: 1 }}
+                animate={{
+                    opacity: isHovered ? 0 : 1,
+                    y: isHovered ? -10 : 0,
+                }}
+                transition={{ duration: 0.3 }}
+                className="absolute top-8 right-8 z-20 pointer-events-none"
+            >
+                <div className="flex items-center gap-2 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg border-2 border-[#7A6F5D]/30">
+                    <motion.div
+                        animate={{
+                            scale: [1, 1.2, 1],
+                        }}
+                        transition={{
+                            duration: 1.5,
+                            repeat: Infinity,
+                            ease: "easeInOut"
+                        }}
+                    >
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#7A6F5D" />
+                        </svg>
+                    </motion.div>
+                    <span className="text-[#7A6F5D] text-sm font-medium">
+                        {t("hover_hint")}
+                    </span>
+                </div>
+            </motion.div>
+
             {/* Headline - nur beim Hovern sichtbar */}
             <motion.div
                 initial={{ opacity: 0, y: -20 }}
